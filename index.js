@@ -89,8 +89,8 @@ console.log(newlen);
 // console.log(mydate.getFullYear());
 // console.log(mydate.getDay());
 
-let elem=document.getElementById('click');
-console.log(elem);
+ let elem=document.getElementById('click');
+// console.log(elem);
 let elemclass=document.getElementsByClassName("container1");
 console.log("elemclass");
 elemclass[0].classList.add("bg-primary");
@@ -103,5 +103,57 @@ let elemclass2=document.getElementsByClassName("container2");
 console.log(elemclass2[0].innerHTML);
 console.log(elemclass2[0].innerText);
 
+// making a child
+tn = document.getElementsByTagName('div');
+console.log(tn);
+createdElement=document.createElement('p');
+createdElement.innerText="This is a created paragraph";
+tn[0].appendChild(createdElement);
+createdElement2=document.createElement('b');
+createdElement2.innerText="This is a created bold";
+tn[0].replaceChild(createdElement2,createdElement);
+// removeElement- removes the element
 
+// selecting query
+sel=document.querySelector('.container1');
+console.log(sel);
+sel=document.querySelectorAll('.container1');
+console.log(sel);
+
+// events in javascript
+function clicked()
+{
+  console.log('The button is clicked');
+}
+
+// window.onload=function()
+// {
+//   console.log('The window was loaded');
+// }
+
+fcontainer.addEventListener('click',function(){
+  document.querySelectorAll('.container1')[1].innerHTML ="WE have clicked"
+  console.log('Clicked on container');
+})
+
+// fcontainer.addEventListener('mouseover',function(){
+//   console.log('Mouse on container');
+// })
+// fcontainer.addEventListener('mouseover',function(){
+//   console.log('Mouse out of  container');
+// })
+
+// FUNCTION 
+// function summ(a,b){
+//   return (a+b)
+// }
+summ=(a,b)=>{
+  return(a+b)
+}
+logkaro=()=>{
+document.querySelectorAll('.container2')[0].innerText="New functon inserted"
+console.log("I am your log");
+}
+
+setTimeout(logkaro,2000);
 
